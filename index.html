@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </script>
+  <title>Document</title>
+
+  <style>
+    .all {
+      display: flex;
+
+    }
+
+    .sidebar {
+      width: 30rem;
+      height: 480rem;
+      background-color: rgb(25, 16, 58);
+    }
+
+    .sidebar p {
+      color: white;
+      margin-top: 4rem;
+      margin-left: 1.5rem;
+      text-decoration: underline;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 30px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+
+    }
+
+    .containerr {
+      margin-top: 1.5rem;
+      width: 80rem;
+    }
+
+    .examp {
+
+      width: 35rem;
+      margin-top: 5rem;
+      margin-left: 1.5rem;
+
+    }
+
+    .links {
+      margin-top: 15rem;
+    }
+
+    .links a {
+      display: block;
+      text-decoration: none;
+      margin-bottom: 2rem;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: larger;
+      color: blueviolet;
+    }
+
+    .links a:hover {
+      background-color: white;
+    }
+
+    .examp1 {
+      float: right;
+      margin-top: 5rem;
+      margin-right: 1rem;
+    }
+
+    .examp4 {
+      float: right;
+      margin-top: 8rem;
+      margin-right: 20rem;
+    }
+
+    .exx {
+      margin-left: 20rem;
+    }
+
+    h5 {
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .navbar-brand {
+      color: blueviolet;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .table {
+      margin-top: 10rem;
+   
+    }
+  </style>
+</head>
+
+<body>
+  <div class="all">
+    <div class="sidebar">
+      <div class="links">
+        <ul>
+          <h5>Here you can find</h5>
+          <li> <a href="#summary">Covid19 Summary</a>
+          </li>
+          <li> <a href="#bycountry">By Country Record</a>
+
+          <li><a href="#bycountry">World Total Record</a>
+          </li>
+          <li><a href="#wt">Status</a></li>
+          <li><a href="#wt">table of Countries with covid19 Record </a></li>
+
+        </ul>
+      </div>
+    </div>
+
+
+
+
+    <div class="ex">
+      <div class="containerr">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" class="form-control" href="index.html">DashBorad for Covid19 Record </a>
+            <input type="search" name="" id="valueOfInput" placeholder="search here">
+            <button class="btn btn-primary" type="button" onclick="click111()">search</button>
+          </div>
+        </nav>
+      </div>
+
+
+      <div class="examp exx">
+        <div class="ct">
+          <div class="card">
+            <div class="card-body">
+              <figure class="highcharts-figure">
+                <div id="container"></div>
+                <p class="highcharts-description">
+                  This column graph shows covid19 Records all stats for all Countries .
+                </p>
+              </figure>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="examp1">
+        <div class="ct">
+          <div class="card">
+            <div class="card-body">
+              <figure class="highcharts-figure">
+                <div id="chart2"></div>
+                <p class="highcharts-description">
+
+                </p>
+              </figure>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="examp">
+        <div class="ct">
+          <div class="card">
+            <div class="card-body">
+              <figure class="highcharts-figure">
+                <div id="chart3"></div>
+                <p class="highcharts-description">
+
+                </p>
+              </figure>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="examp4">
+        <div class="ct">
+          <div class="card">
+            <div class="card-body">
+              <figure class="highcharts-figure">
+                <div id="chart4"></div>
+                <p class="highcharts-description">
+
+                </p>
+              </figure>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="examp4">
+        <div class="ct">
+          <div class="card">
+            <div class="card-body">
+              <figure class="highcharts-figure">
+                <div id="chart5"></div>
+                <p class="highcharts-description">
+
+                </p>
+              </figure>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br><br><br><br> <br><br><br> <br><br><br>
+      <br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Country name</th>
+            <th scope="col">TotalConfirmed</th>
+            <th scope="col"> TotalDeaths</th>
+            <th scope="col">New Records</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+
+          </tr>
+
+        </tbody>
+      </table>
+   
+    </div>
+
+  </div>
+
+  <section class="">
+    <!-- Footer -->
+    <footer class="text-center text-white">
+      <!-- Grid container -->
+
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(71, 54, 131, 0.795);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://covid19result.com/">coviddashboard.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </section>
+
+  <script src="newcovidjs.js"></script>
+</body>
+
+</html>
